@@ -1,0 +1,21 @@
+{
+  "name": "ainojs-pubsub",
+  "version": "1.0.2",
+  "description": "Minimal pubsub interface",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aino/ainojs-pubsub"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aino/ainojs-pubsub/issues"
+  },
+  "homepage": "https://github.com/aino/ainojs-pubsub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aino",
+  "devDependencies": {},
+  "dependencies": {}
+}
