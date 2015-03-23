@@ -19,8 +19,9 @@ module.exports.trigger = function(topic, args) {
     return false
   var subscribers = topics[topic]
   var len = subscribers ? subscribers.length : 0
-  while (len--)
-    subscribers[len].func(args)
+  var i = 0
+  for(; i<len; i++)
+    subscribers[i].func(args)
   return true
 }
 
@@ -36,4 +37,12 @@ module.exports.off = function(token) {
     }
   }
   return false
+}
+
+module.exports.clear = function() {
+  topics = {}
+}
+
+module.exports.getTopics = function() {
+  return topics
 }
