@@ -10,17 +10,24 @@ beforeEach(function() {
   PubSub.clear()
 })
 
-describe('PubSub.on', function() {
-  it('Should call handlers in the same order', function() {
+describe('PubSub.Trigger', function() {
+  it('Should trigger methods in the same order they where added', function() {
     var n = []
-    PubSub.on('x', function() {
+    PubSub.on('foo', function() {
       n.push(1)
     })
-    PubSub.on('x', function() {
+    PubSub.on('foo', function() {
       n.push(2)
     })
-    PubSub.trigger('x')
+    PubSub.trigger('foo')
     expect(n).to.eql([1,2])
+  })
+  it('Should trigger methods with arguments', function(done) {
+    PubSub.on('foo', function(args) {
+      expect(args).to.eql({foo:'bar'})
+      done()
+    })
+    PubSub.trigger('foo', { foo: 'bar' })
   })
 })
 
