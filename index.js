@@ -3,9 +3,8 @@ var topics = {}
 var subUid = -1
 
 module.exports.on = function(topic, func) {
-  if (!topics[topic]) {
+  if (!topics[topic])
     topics[topic] = []
-  }
   var token = (++subUid).toString()
   topics[topic].push({
     token: token,
