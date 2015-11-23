@@ -21,7 +21,7 @@ module.exports.trigger = function(topic, args) {
   var len = subscribers ? subscribers.length : 0
   var i = 0
   for(; i<len; i++)
-    subscribers[i].func(args)
+    typeof subscribers[i].func == 'function' && subscribers[i].func(args)
   return true
 }
 
