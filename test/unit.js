@@ -10,7 +10,7 @@ beforeEach(function() {
   PubSub.clear()
 })
 
-describe('PubSub.Trigger', function() {
+describe('PubSub.trigger', function() {
   it('Should trigger methods in the same order they where added', function() {
     var n = []
     PubSub.on('foo', function() {
@@ -37,7 +37,7 @@ describe('PubSub.off', function() {
     var middle = PubSub.on('x', function() { return 1 })
     PubSub.on('x', function() { return 2 })
     PubSub.off(middle)
-    expect(PubSub.getTopics().x.map(function(topic) {
+    expect(PubSub.allTopics.x.map(function(topic) {
       return topic.func()
     })).to.eql([0,2])
   })
