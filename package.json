@@ -1,6 +1,6 @@
 {
   "name": "ainojs-pubsub",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Minimal pubsub interface",
   "repository": {
     "type": "git",
