@@ -21,16 +21,7 @@
     "mocha": "^2.2.1"
   },
   "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
+    "transform": ["babelify"]
   },
   "dependencies": {}
 }
