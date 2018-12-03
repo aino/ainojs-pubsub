@@ -1,6 +1,6 @@
 {
   "name": "ainojs-pubsub",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Minimal pubsub interface",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "postversion": "git push && git push --tags",
     "prepublishOnly": "npm test",
     "test": "./node_modules/.bin/mocha --check-leaks",
-    "version": "git add -A src"
+    "version": "git add -A ."
   },
   "author": "Aino",
   "devDependencies": {
