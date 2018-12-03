@@ -16,7 +16,7 @@
     "postversion": "git push && git push --tags",
     "prepublishOnly": "npm test",
     "test": "./node_modules/.bin/mocha --check-leaks",
-    "version": "git add -A src",
+    "version": "git add -A src"
   },
   "author": "Aino",
   "devDependencies": {
